@@ -1,0 +1,44 @@
+<div class="d-flex flex-row bd-highlight mb-9">
+  <div class="p-2 w-100 bd-highlight">
+    <div class="input-group mb-3">
+      <span class="input-group-text">CreditNumber</span>
+      <input type="number" class="form-control" [(ngModel)]="CreditNumber">
+      <input hidden type="text" class="form-control" [(ngModel)]="InvoiceId">
+    </div>
+
+<div class="input-group mb-3">
+    <span class="input-group-text">Invoice</span>
+    <select class="form-select" [(ngModel)]="InvoiceId">
+        <option>--Select--</option>
+        <option *ngFor="let invoice of InvoiceSimpleList" [value]="invoice.id">
+            {{ invoice.invoiceNumber }}
+        </option>
+    </select>
+</div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">ExternalCreditNumber</span>
+      <input type="text" class="form-control" [(ngModel)]="ExternalCreditNumber">
+    </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">CreditStatus</span>
+    <select class="form-select" [(ngModel)]="CreditStatus" name="CreditStatus">
+      <option value=1>Approved</option>
+      <option value=2>Waiting for Approval</option>
+    </select>    
+  </div>
+ 
+    <div class="input-group mb-3">
+      <span class="input-group-text">TotalAmount</span>
+      <input type="number" class="form-control" [(ngModel)]="TotalAmount">
+    </div>
+  </div>
+</div>
+<button (click)="addDependentCreditNote()" *ngIf="dependentCreditNote.DependentCreditNoteId == ''" class="btn btn-primary">
+  Add
+</button>
+
+<button (click)="updateDependentCreditNote()" *ngIf="dependentCreditNote.DependentCreditNoteId !=''" class="btn btn-primary">
+  Update
+</button>

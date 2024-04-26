@@ -1,0 +1,61 @@
+# Dependencies
+/node_modules
+/dist
+
+# IDE/Editor
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing
+/coverage
+
+# Environment Variables
+.env
+.env.prod
+.env.dev
+
+# Log Files
+*.log
+
+# Compiled binary files
+*.bin
+*.dll
+*.exe
+*.o
+*.obj
+*.so
+
+# Package Files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Image Files
+*.bmp
+*.gif
+*.ico
+*.jpeg
+*.jpg
+*.png
+*.svg
+
+# Fonts
+*.eot
+*.otf
+*.ttf
+*.woff
+*.woff2
+
+# Cache Files
+*.log
+*.cache

@@ -1,0 +1,35 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+  <div class="p-2 w-50 bd-highlight">
+    <div class="input-group mb-3">
+      <span class="input-group-text">InvoiceNumber</span>
+      <input type="number" class="form-control" [(ngModel)]="InvoiceNumber">
+      <input hidden type="text" class="form-control" [(ngModel)]="InvoiceId">
+    </div>
+
+    <div class="input-group mb-3">
+      <span class="input-group-text">ExternalInvoiceNumber</span>
+      <input type="text" class="form-control" [(ngModel)]="ExternalInvoiceNumber">
+    </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">InvoiceStatus</span>
+    <select class="form-select" [(ngModel)]="InvoiceStatus" name="InvoiceStatus">
+      <option value=1>Approved</option>
+      <option value=2>Waiting for Approval</option>
+    </select>    
+  </div>
+ 
+    <div class="input-group mb-3">
+      <span class="input-group-text">TotalAmount</span>
+      <input type="number" class="form-control" [(ngModel)]="TotalAmount">
+    </div>
+    
+  </div>
+</div>
+<button type="button" (click)="addInvoice()" *ngIf="emp.InvoiceId==''" class="btn btn-primary">
+  Create
+</button>
+
+<button type="button" (click)="updatInvoice()" *ngIf="emp.InvoiceId!=''" class="btn btn-primary">
+  Update
+</button>
