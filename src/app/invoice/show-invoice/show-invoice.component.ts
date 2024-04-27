@@ -13,11 +13,13 @@ export class ShowInvoiceComponent implements OnInit {
   InvoiceList: any = [];
   ModalTitle = "";
   DependentCrediModalNoteTitle="";
+  InDependentCrediModalNoteTitle="";
   ActivateAddEditEmpComp: boolean = false;
   ActivateAddEditDdependentCreditNoteComp:boolean = false;
+  ActivateAddEditInDdependentCreditNoteComp:boolean=false;
   emp: any;
   dependentCreditNote:any;
-
+  inDependentCreditNote: any;
 
   ngOnInit(): void {
     this.refreshEmpList();
@@ -76,6 +78,28 @@ export class ShowInvoiceComponent implements OnInit {
     this.dependentCreditNote = item;
     this.DependentCrediModalNoteTitle = "Edit DependentCreditNote";
     this.ActivateAddEditDdependentCreditNoteComp = true;
+  }
+
+  inDependentCreditNoteaddClick()
+  {
+    debugger;
+    this.inDependentCreditNote = {
+      InDependentCreditNoteId:"", 
+      ExternalCreditNumber: "",
+      CreditNumber: 0,
+      TotalAmount: 0,
+      CreditStatus: 1
+    }
+
+    this.InDependentCrediModalNoteTitle = "Add  InDependentCreditNote";
+    this.ActivateAddEditInDdependentCreditNoteComp = true;
+  }
+
+  inDependentCreditNoteeditClick(item: any) {
+
+    this.inDependentCreditNote = item;
+    this.InDependentCrediModalNoteTitle = "Edit InDependentCreditNote";
+    this.ActivateAddEditInDdependentCreditNoteComp = true;
   }
 
   refreshEmpList() {

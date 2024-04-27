@@ -8,6 +8,11 @@
   Add DependentCreditNote
 </button>
 
+<button type="button" class="btn btn-primary m-2 float-end" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+  (click)="inDependentCreditNoteaddClick()">
+  Add InDependentCreditNote
+</button>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
@@ -41,6 +46,24 @@
       <div class="modal-body">
         <app-add-edit-invoice [emp]="emp" *ngIf="ActivateAddEditEmpComp">
         </app-add-edit-invoice>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{InDependentCrediModalNoteTitle}}</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" (click)="closeClick()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-add-edit-in-dependent-credit-note [inDependentCreditNote]="inDependentCreditNote" *ngIf="ActivateAddEditInDdependentCreditNoteComp">
+        </app-add-edit-in-dependent-credit-note>
       </div>
     </div>
   </div>

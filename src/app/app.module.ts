@@ -9,6 +9,7 @@ import { AddEditInvoiceComponent } from './invoice/add-edit-invoice/add-edit-inv
 import { ApiserviceService } from './apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddEditInDependentCreditNoteComponent } from './inDependentCreditNote/add-edit-in-dependent-credit-note/add-edit-in-dependent-credit-note.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddEditDependentCreditNoteComponent,
     InvoiceComponent,
     ShowInvoiceComponent,
-    AddEditInvoiceComponent
+    AddEditInvoiceComponent,
+    AddEditInDependentCreditNoteComponent
   ],
   imports: [
     BrowserModule,

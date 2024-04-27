@@ -51,4 +51,10 @@ export class ApiserviceService {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     return this.http.delete<string>(this.apiUrl + 'Document/delete-' + id + '-invoice', httpOptions);
   }
+
+  // InDependentInvoie
+  addInDependentCreditNote(dept: any): Observable<any> {
+    const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.post<any>(this.apiUrl + 'Document/add-independent-creditNote', dept, httpOptions);
+  }
 }
