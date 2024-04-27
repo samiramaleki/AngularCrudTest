@@ -121,10 +121,16 @@ export class ShowInvoiceComponent implements OnInit {
   dependentCreditNotedeleteClick(item: any) {
     debugger;
     if (confirm('Are you sure??')) {
-      this.service.deleteInDependentCreditNote(item.dependentCreditNoteId).subscribe(data => {
+      this.service.deleteDependentCreditNote(item.dependentCreditNoteId).subscribe(data => {
         alert(data.toString());
         this.refreshEmpList();
       })
     }
+  }
+
+  editdependentCreditNoteClick(item: any) {
+    this.dependentCreditNote = item;
+    this.DependentCrediModalNoteTitle = "Edit DependentCreditNote";
+    this.ActivateAddEditDdependentCreditNoteComp = true;
   }
 }
