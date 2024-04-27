@@ -59,4 +59,4 @@
 # Cache Files
 *.log
 *.cache
-*.angular/cache/
+*.angular/cache/13.2.6
