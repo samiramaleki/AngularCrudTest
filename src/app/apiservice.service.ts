@@ -25,6 +25,11 @@ export class ApiserviceService {
     return this.http.put<any>(this.apiUrl + 'Document/update-dependent-creditNote/', dept, httpOptions);
   }
 
+  deleteDependentCreditNote(id: string): Observable<string> {
+    debugger;
+    const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.delete<string>(this.apiUrl + 'Document/delete-' + id + '-dependent-creditNote', httpOptions);
+  }
   // Invoice
   getInvoiceList(): Observable<any[]> {
     
@@ -61,4 +66,11 @@ export class ApiserviceService {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     return this.http.put<any>(this.apiUrl + 'Document/update-independent-creditNot/', dept, httpOptions);
   }
+
+  deleteInDependentCreditNote(id: string): Observable<string> {
+    debugger;
+    const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.delete<string>(this.apiUrl + 'Document/delete-' + id + '-independent-creditNote', httpOptions);
+  }
+
 }

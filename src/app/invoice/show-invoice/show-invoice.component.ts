@@ -107,4 +107,24 @@ export class ShowInvoiceComponent implements OnInit {
       this.InvoiceList = data;
     });
   }
+
+  inDependentCreditNotedeleteClick(item: any) {
+    debugger;
+    if (confirm('Are you sure??')) {
+      this.service.deleteInDependentCreditNote(item.independentCreditNoteId).subscribe(data => {
+        alert(data.toString());
+        this.refreshEmpList();
+      })
+    }
+  }
+  
+  dependentCreditNotedeleteClick(item: any) {
+    debugger;
+    if (confirm('Are you sure??')) {
+      this.service.deleteInDependentCreditNote(item.dependentCreditNoteId).subscribe(data => {
+        alert(data.toString());
+        this.refreshEmpList();
+      })
+    }
+  }
 }

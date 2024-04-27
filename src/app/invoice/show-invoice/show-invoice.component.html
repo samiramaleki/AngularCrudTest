@@ -93,7 +93,7 @@
       <td>{{dataItem.externalCreditNumber}}</td>
       <td>{{dataItem.creditStatus}}</td>
       <td>{{dataItem.creditTotalAmount}}</td>   
-      <td>
+      <td [width]="100" [height]="50">
         <button type="button" title="InvoiceEdit" class="btn btn-light mr-1" data-bs-toggle="modal" data-bs-target="#exampleModal"
           (click)="editClick(dataItem)" data-backdrop="static" data-keyboard="false">
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor"
@@ -111,6 +111,16 @@
               d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z" />
           </svg>
         </button>
+            <button title="InDependentCreditNote" type="button" class="btn btn-light mr-1" (click)="inDependentCreditNotedeleteClick(dataItem)">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10.354 8L15 12.646 12.646 15 8 10.354 3.354 15 1 12.646 5.646 8 1 3.354 3.354 1 8 5.646 12.646 1 15 3.354 10.354 8z"/>
+              </svg>
+        </button>
+        <button title="DependentCreditNote" type="button" class="btn btn-light mr-1" (click)="dependentCreditNotedeleteClick(dataItem)">
+          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H4l1.938 9.689A1.5 1.5 0 0 0 7.418 15h1.164a1.5 1.5 0 0 0 1.48-1.311L12 4h1.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-11zM5.499 5L5 14h6l-.5-9h-5zM4.12 3h7.76L12.5 14H3.5l.62-11z"/>
+          </svg>
+         </button>
       </td>
     </tr>
   </tbody>
