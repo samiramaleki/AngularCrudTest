@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -56,5 +55,10 @@ export class ApiserviceService {
   addInDependentCreditNote(dept: any): Observable<any> {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     return this.http.post<any>(this.apiUrl + 'Document/add-independent-creditNote', dept, httpOptions);
+  }
+
+  updateInDependentCreditNote(dept: any): Observable<any> {
+    const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.put<any>(this.apiUrl + 'Document/update-independent-creditNot/', dept, httpOptions);
   }
 }

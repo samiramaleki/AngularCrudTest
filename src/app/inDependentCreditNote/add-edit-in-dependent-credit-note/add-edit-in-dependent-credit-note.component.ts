@@ -44,4 +44,18 @@ export class AddEditInDependentCreditNoteComponent implements OnInit {
       });
     }
 
+    updateInDependentCreditNote() {
+      debugger;
+      var val = {
+        InDependentCreditNoteId: this.InDependentCreditNoteId,
+        ExternalCreditNumber: this.ExternalCreditNumber,
+        CreditNumber: this.CreditNumber,
+        TotalAmount: this.TotalAmount,
+        CreditStatus: Number(this.CreditStatus)
+      };
+  
+      this.service.updateInDependentCreditNote(val).subscribe(res => {
+        alert(res.toString());
+      });
+    }
 }
